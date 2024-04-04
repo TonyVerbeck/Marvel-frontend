@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*------------HEADER--------------- |
+|                                   |
+|----------------------------------*/
+
+header {
+  padding: 25px 20px;
+  height: 100px;
+  background-color: red;
+}
+
+.header-bloc {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-right: 50px;
+}
+
+.search-container input {
+  width: 300px;
+}
+
+.header-bloc img {
+  height: 50px;
+  display: flex;
+}
+
+.home {
+  background-size: cover;
+  object-fit: cover;
+  height: 700px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-home {
+  position: absolute;
+}
+
+.btn-home button {
+  list-style-type: none;
+  text-decoration: none;
+  padding: 40px;
+  font-size: 20px;
+  font-weight: 700;
+  color: black;
+  background: rgba(255, 255, 255, 0.1);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  border: solid black 4px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  margin-right: 50px;
+  width: 200px;
+}
+
+.btn-home button:hover {
+  border: 2px solid red;
+  box-shadow: 10px 5px 5px red;
+  color: red;
+  text-align: center;
+  font-size: 22px;
+}
