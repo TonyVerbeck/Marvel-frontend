@@ -9,7 +9,7 @@ const Characters = ({ search }) => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `site--marvel-backend--z2glzylh58rz.code.run/characters?apiKey=bRwx3gFkjejIDsWA&name=${search}`
+          `site--marvel-backend--z2glzylh58rz.code.run/characters?&name=${search}`
         );
         console.log(response.data);
         setData(response.data.results);
