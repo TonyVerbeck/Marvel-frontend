@@ -2,12 +2,34 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-image: url("./assets/img/marvel-chromebook-wallpaper.jpg");
+}
+
 .container {
   width: 1240px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+h2 {
+  font-size: 12px;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 13px;
+  line-height: 15px;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: justify;
 }
 
 /*------------HEADER--------------- |
@@ -17,23 +39,55 @@
 header {
   padding: 25px 20px;
   height: 100px;
-  background-color: red;
+  background-color: #ed1d24;
 }
 
 .header-bloc {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
+
+.btn-header button {
+  border: 1px solid #ed1d24;
+  color: #ed1d24;
+  background-color: white;
+  outline: none;
+  border-radius: 5px;
+  font-size: 12px;
+  height: 30px;
+  width: 115px;
+  cursor: pointer;
+}
+
+.btn-header button:first-child {
+  margin-right: 20px;
+}
+
+/*------------Home--------------- |
+|                                   |
+|----------------------------------*/
 
 .search-container {
   display: flex;
   align-items: center;
-  gap: 20px;
-  padding-right: 50px;
+  justify-content: center;
+  position: relative;
 }
 
 .search-container input {
-  width: 300px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 500px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+.search-icon {
+  position: absolute;
+  color: #bdbdbd;
 }
 
 .header-bloc img {
@@ -77,9 +131,280 @@ header {
 }
 
 .btn-home button:hover {
-  border: 2px solid red;
-  box-shadow: 10px 5px 5px red;
-  color: red;
+  border: 2px solid #ed1d24;
+  box-shadow: 10px 5px 5px #ed1d24;
+  color: #ed1d24;
   text-align: center;
   font-size: 22px;
+}
+
+/*------------Characters------------|
+|                                   |
+|----------------------------------*/
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  width: 1080px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.card-info {
+  color: white;
+  text-align: center;
+  max-width: 300px;
+}
+
+.card-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.card-img {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-img img {
+  width: 324px;
+  max-height: 350px;
+  min-height: 350px;
+  border-radius: 15px;
+  object-fit: fill;
+}
+
+.card-description {
+  text-align: center;
+}
+
+.card-img:hover {
+  transform: scale(1.05);
+  transition: 0.5s;
+  color: transparent;
+  border: transparent;
+}
+
+.comic-card-info img:hover {
+  transform: scale(1.05);
+  transition: 0.5s;
+  color: transparent;
+  border: transparent;
+}
+
+.comic-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px;
+  width: 1080px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.comic-img img {
+  min-height: 600px;
+  max-height: 600px;
+  max-width: 400px;
+  object-fit: fill;
+}
+
+/*---------Characters ID------------|
+|                                   |
+|----------------------------------*/
+
+.charid-message {
+  margin-top: 300px;
+  margin-bottom: 300px;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+}
+.charid-container {
+  width: 1080px;
+  display: flex;
+  gap: 70px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.charid-cards {
+  width: 45%;
+  color: white;
+  padding-top: 30px;
+}
+.charid-infos h2 {
+  text-align: center;
+  font-size: 11px;
+}
+
+.charid-description img {
+  max-width: 500px;
+  min-width: 500px;
+  max-height: 600px;
+  min-height: 600px;
+}
+
+.charid-cards img:hover {
+  transform: scale(1.05);
+  transition: 0.5s;
+  color: transparent;
+  border: transparent;
+}
+
+.list {
+  border: 1px solid #fff;
+  padding: 5px;
+}
+
+/*------------Comic ID--------------|
+|                                   |
+|----------------------------------*/
+
+.comicid {
+  margin: 0 auto;
+  width: 50%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.comicid img {
+  width: 100%;
+}
+.comicid-infos {
+  margin-top: 50px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.comicid img:hover {
+  color: white;
+  border: transparent;
+  transform: scale(1.03);
+  transition: 0.5s;
+}
+.comicid-description {
+  margin-bottom: 50px;
+  margin-top: 30px;
+  line-height: 20px;
+  text-align: center;
+}
+
+/*-----------Pagination-------------|
+|                                   |
+|----------------------------------*/
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 15px;
+  padding-bottom: 50px;
+}
+
+.pagination button {
+  width: 30px;
+  height: 30px;
+  font-size: 15px;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  background: transparent;
+  color: #eee;
+  border-color: #eee;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.pagination button:hover {
+  border: 2px solid black;
+  box-shadow: 2px 2px 2px black;
+  color: white;
+  text-align: center;
+  font-size: 15px;
+}
+
+/*-------------Footer---------------|
+|                                   |
+|----------------------------------*/
+
+.footer-container {
+  height: 100px;
+  width: 100%;
+  background-color: #ed1d24;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer p {
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.waiting {
+  height: 1000px;
+  font-size: 50px;
+  padding-top: 100px;
+  color: white;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-position: cover;
+}
+
+.form-container,
+.form-signup {
+  display: flex;
+  flex-direction: column;
+  height: 800px;
+  width: auto;
+}
+
+.form-container {
+  justify-content: center;
+  margin-top: 80px;
+  text-align: center;
+}
+
+.form-signup {
+  margin: auto;
+  width: 275px;
+}
+
+.form-signup > input {
+  border: none;
+  border-bottom: 1px solid #fcced3;
+  height: 35px;
+  margin-bottom: 20px;
+  padding: 1px 0px;
+  text-align: center;
+}
+
+.form-signup > input,
+button {
+  outline-color: #ed1d24;
+}
+
+.btn-valid {
+  background-color: white;
+  border-color: #ed1d24;
+  border-radius: 5px;
+  color: #ed1d24;
+  font-size: 16px;
+  height: 35px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.lien-login {
+  color: white;
+  font-size: 12px;
+  margin-top: 20px;
+  text-decoration: none;
+  text-align: center;
 }

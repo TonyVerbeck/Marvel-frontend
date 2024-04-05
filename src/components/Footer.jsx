@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <footer>
-      <div className="footer-box">
+      <div className="footer-container">
         <p>Projet réalisé par Tony Verbeck</p>
       </div>
     </footer>

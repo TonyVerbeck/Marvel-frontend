@@ -1,7 +1,7 @@
 import logo from "../assets/img/logo.svg";
 import { Link } from "react-router-dom";
 
-const Header = ({ search, setSearch }) => {
+const Header = () => {
   return (
     <>
       <header>
@@ -11,31 +11,19 @@ const Header = ({ search, setSearch }) => {
               <img src={logo} alt="" />
             </Link>
           </div>
-          <div className="search-container">
-            <div>
-              <input
-                placeholder="   Recherche ton personnage"
-                type="text"
-                value={search}
-                onChange={(event) => {
-                  setSearch(event.target.value);
-                }}
-              />
-            </div>
-            <div>
-              <input
-                placeholder="   Recherche ton comic"
-                type="text"
-                value={search}
-                onChange={(event) => {
-                  setSearch(event.target.value);
-                }}
-              />
-            </div>
+          <div className="btn-header">
+            <Link to="/signup">
+              <button>S'inscrire</button>
+            </Link>
+
+            <Link to="/login">
+              <button>Se connecter</button>
+            </Link>
           </div>
         </div>
       </header>
     </>
   );
 };
+
 export default Header;
