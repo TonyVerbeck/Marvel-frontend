@@ -13,8 +13,8 @@ const Comics = ({ search, setSearch }) => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `site--marvel-backend--z2glzylh58rz.code.run/characters?&name=${search}`
-          // `http://localhost:3000/comics?&name=${search}`
+          // `https://site--marvel-backend--z2glzylh58rz.code.run/comics?title=${search}`
+          `http://localhost:3000/comics?title=${search}`
         );
         console.log(response.data);
         setData(response.data.results);
@@ -26,18 +26,9 @@ const Comics = ({ search, setSearch }) => {
     fetchData();
   }, [search, setSearch]);
 
-  const paginationComponent = data.length > 0 && (
-    <Pagination
-      totalItem={data.length}
-      resultsPerPage={resultsPerPage}
-      setCurrentPage={setCurrentPage}
-      currentPage={currentPage}
-    />
-  );
-
-  const lastItem = data ? currentPage * resultsPerPage : 0;
+  const lastItem = currentPage * resultsPerPage;
   const firstItem = lastItem - resultsPerPage;
-  const currentItem = data ? data.slice(firstItem, lastItem) : [];
+  const currentItem = data.slice(firstItem, lastItem);
 
   return isLoading ? (
     <p className="waiting">Un peu de patience...</p>
@@ -78,7 +69,12 @@ const Comics = ({ search, setSearch }) => {
           );
         })}
       </div>
-      <paginationComponent />
+      <Pagination
+        totalItem={data.length}
+        resultsPerPage={resultsPerPage}
+        setCurrentPage={setCurrentPage}
+        currentPage={currentPage}
+      />
     </main>
   );
 };

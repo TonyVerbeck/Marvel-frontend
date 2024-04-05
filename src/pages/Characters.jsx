@@ -13,8 +13,8 @@ const Characters = ({ search, setSearch }) => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `site--marvel-backend--z2glzylh58rz.code.run/characters?&name=${search}`
-          //   `http://localhost:3000/characters?name=${search}`
+          // `https://site--marvel-backend--z2glzylh58rz.code.run/characters?name=${search}`
+          `http://localhost:3000/characters?name=${search}`
         );
         setData(response.data.results);
         // console.log(response.data.results);
@@ -28,8 +28,7 @@ const Characters = ({ search, setSearch }) => {
 
   const lastItem = currentPage * resultsPerPage;
   const firstItem = lastItem - resultsPerPage;
-  const currentItem =
-    data && data.length > 0 ? data.slice(firstItem, lastItem) : [];
+  const currentItem = data.slice(firstItem, lastItem);
   // console.log(currentItem);
 
   return isLoading ? (

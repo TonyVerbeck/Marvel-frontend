@@ -14,10 +14,10 @@ const Pagination = ({
         return (
           <button
             key={index}
-            onClick={() => setCurrentPage(paginationNumbers)}
-            className={page === currentPage ? "active" : ""}
+            onClick={() => setCurrentPage(page)}
+            className={paginationNumbers === currentPage ? "active" : ""}
           >
-            {paginationNumbers}
+            {page}
           </button>
         );
       })}
