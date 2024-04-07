@@ -1,7 +1,8 @@
+import React from "react";
 import logo from "../assets/img/logo.svg";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ token, handleToken }) => {
   return (
     <>
       <header>
@@ -11,15 +12,33 @@ const Header = () => {
               <img src={logo} alt="" />
             </Link>
           </div>
-          <div className="btn-header">
-            <Link to="/signup">
-              <button>S'inscrire</button>
-            </Link>
 
-            <Link to="/login">
-              <button>Se connecter</button>
-            </Link>
-          </div>
+          {token ? (
+            <>
+              <div className="btn-header">
+                <button
+                  className="btn-disconnect"
+                  onClick={() => {
+                    handleToken(null);
+                  }}
+                >
+                  Se déconnecter
+                </button>
+                <Link to="/favoris">
+                  <button className="btn-favoris">Favoris</button>
+                </Link>
+              </div>
+            </>
+          ) : (
+            <div className="btn-header">
+              <Link to="/login">
+                <button>Se connecter</button>
+              </Link>
+              <Link to="/signup">
+                <button>S'inscrire</button>
+              </Link>
+            </div>
+          )}
         </div>
       </header>
     </>

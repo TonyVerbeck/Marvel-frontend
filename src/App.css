@@ -196,6 +196,15 @@ header {
   border: transparent;
 }
 
+.btn-fav {
+  background-color: black;
+  border-color: #ed1d24;
+  border-radius: 5px;
+  color: #ed1d24;
+  font-size: 12px;
+  margin-left: 15px;
+}
+
 .comic-container {
   display: flex;
   flex-wrap: wrap;
@@ -226,14 +235,16 @@ header {
 .charid-container {
   width: 1080px;
   display: flex;
-  gap: 70px;
+  gap: 50px;
+  padding-bottom: 30px;
+  padding-top: 30px;
   flex-wrap: wrap;
   margin: 0 auto;
 }
 .charid-cards {
-  width: 45%;
+  width: 500px;
   color: white;
-  padding-top: 30px;
+  /* padding-top: 30px; */
 }
 .charid-infos h2 {
   text-align: center;
@@ -252,11 +263,6 @@ header {
   transition: 0.5s;
   color: transparent;
   border: transparent;
-}
-
-.list {
-  border: 1px solid #fff;
-  padding: 5px;
 }
 
 /*------------Comic ID--------------|
@@ -285,8 +291,6 @@ header {
   transition: 0.5s;
 }
 .comicid-description {
-  margin-bottom: 50px;
-  margin-top: 30px;
   line-height: 20px;
   text-align: center;
 }
@@ -301,6 +305,7 @@ header {
   justify-content: center;
   margin-top: 15px;
   padding-bottom: 50px;
+  padding-top: 30px;
 }
 
 .pagination button {

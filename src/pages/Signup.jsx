@@ -48,7 +48,7 @@ const Signup = ({ handleToken }) => {
       console.log(response.data);
       navigate("/");
     } catch (error) {
-      console.log(error.response.data);
+      console.log(error);
 
       if (error.response.status === 409) {
         setError("This email already as an account, please use another one");
