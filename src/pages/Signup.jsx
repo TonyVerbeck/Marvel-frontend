@@ -35,7 +35,7 @@ const Signup = ({ handleToken }) => {
     event.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:3000/user/signup",
+        "site--marvel-backend--z2glzylh58rz.code.run/user/signup",
 
         {
           email: email,
